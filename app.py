@@ -7,10 +7,12 @@ import string
 
 app = Flask(__name__)
 
+nltk.data.path.append('./nltk_data')
+nltk.download('punkt_tab')
+
 nltk.download('punkt')
 nltk.download('stopwords')
 
-nltk.data.path.append('/Users/kapil/Desktop/ ABBY/SPAM CLASSIFIER/spamvenv/lib/nltk_data')
 ps = PorterStemmer()
 
 def transform_text(text):
